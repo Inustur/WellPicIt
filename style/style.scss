@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light:wght@400;700&display=swap');
+
 $primary-background-color: #EFEBEB;
 $regular-button-padding: 20px 50px;
 $primary-font:'Open Sans', sans-serif;;
@@ -27,7 +29,7 @@ body {
   h1{
     max-width: 40vw;
     font-size: 5em;
-    margin: 100px 30px 50px 30px;
+    margin: 20px 30px;
   }
 
   .guide-container{
@@ -39,6 +41,7 @@ body {
   .guide{
     display: flex;
     flex-direction: column;
+    max-width: 25vw;
 
     img{
       max-width: 25vw;
@@ -46,13 +49,15 @@ body {
       border: solid #000;
     }
   
-    h1 {
-      font-size: 24px;
+    h2 {
+      font-size: 4em;
       margin-bottom: 10px;
+      font-weight: 700;
     }
   
     p {
-      font-size: 16px;
+      font-size: 1.3em;
+      font-weight: 600;
       margin-bottom: 20px;
     }
   }
@@ -62,9 +67,15 @@ body {
     padding:$regular-button-padding;
     position: absolute;
     right:0;
-    font-family: $primary-font;
+    font-family: "Shadows Into Light", sans-serif;
     font-size: 1.5em;
+    font-style: italic;
+    font-weight: 600;
     border: none;
+    transition: all 1s ease-out;
+    &:hover {
+      transform: translateY(2.5px);
+    }
   }
 
   #gofullpage{
@@ -76,5 +87,10 @@ body {
     font-weight: 700;
     font-family: $primary-font;
     max-width: 30vw;
+    transition: all 1s ease-out;
+
+    &:hover {
+      transform: rotateZ(2deg);
+    }
   }
 }

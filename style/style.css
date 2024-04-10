@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light:wght@400;700&display=swap");
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Regular.ttf") format("truetype"); /* Adjust the path to the font file as needed */
@@ -22,7 +23,7 @@ body {
 .loading-guide h1 {
   max-width: 40vw;
   font-size: 5em;
-  margin: 100px 30px 50px 30px;
+  margin: 20px 30px 50px 30px;
 }
 .loading-guide .guide-container {
   display: flex;
@@ -32,18 +33,21 @@ body {
 .loading-guide .guide {
   display: flex;
   flex-direction: column;
+  max-width: 25vw;
 }
 .loading-guide .guide img {
   max-width: 25vw;
   height: auto;
   border: solid #000;
 }
-.loading-guide .guide h1 {
-  font-size: 24px;
+.loading-guide .guide h2 {
+  font-size: 4em;
   margin-bottom: 10px;
+  font-weight: 700;
 }
 .loading-guide .guide p {
-  font-size: 16px;
+  font-size: 1.3em;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 .loading-guide #close-btn {
@@ -51,9 +55,15 @@ body {
   padding: 20px 50px;
   position: absolute;
   right: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Shadows Into Light", sans-serif;
   font-size: 1.5em;
+  font-style: italic;
+  font-weight: 600;
   border: none;
+  transition: all 1s ease-out;
+}
+.loading-guide #close-btn:hover {
+  transform: translateY(2.5px);
 }
 .loading-guide #gofullpage {
   background-color: transparent;
@@ -64,4 +74,8 @@ body {
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
   max-width: 30vw;
+  transition: all 1s ease-out;
+}
+.loading-guide #gofullpage:hover {
+  transform: rotateZ(2deg);
 }/*# sourceMappingURL=style.css.map */
