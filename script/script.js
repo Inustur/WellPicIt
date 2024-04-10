@@ -1,10 +1,19 @@
 //Closing function for loading
+// document.addEventListener('DOMContentLoaded', function() {
+//   const closeButton = document.getElementById('close-btn');
+//   const loadingGuide = document.querySelector('.loading-guide');
+
+//   closeButton.addEventListener('click', function() {
+//     loadingGuide.style.display = 'none';
+//   });
+// });
+
+//open main.html
 document.addEventListener('DOMContentLoaded', function() {
   const closeButton = document.getElementById('close-btn');
-  const loadingGuide = document.querySelector('.loading-guide');
-
+  
   closeButton.addEventListener('click', function() {
-    loadingGuide.style.display = 'none';
+    window.open('pages/main.html', '_self');
   });
 });
 

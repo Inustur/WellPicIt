@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;400&display=swap");
 @font-face {
   font-family: "Open Sans";
   src: url("../fonts/OpenSans-Regular.ttf") format("truetype"); /* Adjust the path to the font file as needed */
@@ -8,8 +10,9 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", "Open Sans", sans-serif;
   background-color: #EFEBEB;
+  color: #000;
 }
 
 .loading-guide {
@@ -23,7 +26,7 @@ body {
 .loading-guide h1 {
   max-width: 40vw;
   font-size: 5em;
-  margin: 20px 30px 50px 30px;
+  margin: 20px 30px;
 }
 .loading-guide .guide-container {
   display: flex;
@@ -72,10 +75,53 @@ body {
   border: #000 solid 2.5px;
   font-size: 1.5em;
   font-weight: 700;
-  font-family: "Open Sans", sans-serif;
+  font-family: "Poppins", "Open Sans", sans-serif;
   max-width: 30vw;
   transition: all 1s ease-out;
 }
 .loading-guide #gofullpage:hover {
   transform: rotateZ(2deg);
+}
+
+.top-bar {
+  position: sticky;
+  width: 97.4vw;
+  background-color: #EFEBEB;
+  color: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 20px;
+  border-bottom: #000 solid;
+}
+.top-bar .logo {
+  font-size: 6em;
+  font-weight: 700;
+  letter-spacing: 5vw;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 97.25vw;
+  background-color: transparent;
+  color: #000;
+  padding: 10px 20px;
+  border-top: #000 solid;
+}
+.bottom-bar .word-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+.bottom-bar .word-container div {
+  background-color: transparent;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: move;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=style.css.map */
