@@ -5,7 +5,23 @@
 $primary-background-color: #EFEBEB;
 $primary-font-color:#000;
 $regular-button-padding: 20px 50px;
-$primary-font:'Poppins','Open Sans', sans-serif;;
+$primary-font:'Poppins','Open Sans', sans-serif;
+
+@mixin underline-effect($underline-height: 2px, $underline-color: #000) {
+  overflow: hidden;
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: $underline-height; // Default thickness of the underline
+    background-color: $underline-color; // Default color of the underline
+    transition: width 0.3s ease;
+  }
+}
+
 
 @font-face {
   font-family: 'Open Sans';
@@ -79,8 +95,13 @@ body {
     font-weight: 600;
     border: none;
     transition: all 1s ease-out;
+
+    @include underline-effect(2px, #000);
+
     &:hover {
-      transform: translateY(2.5px);
+      &::after {
+        width: 100%; // This expands the underline across the button
+      }
     }
   }
 
@@ -161,6 +182,12 @@ body {
       padding: 10px;
       cursor: move;
       user-select: none;
+
+      transition: all 1s ease-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
     }
   }
 }
@@ -173,6 +200,11 @@ body {
   img{
     max-width: 8vw;
     height: auto;
+    transition: all 1s ease-out;
+
+    &:hover {
+      transform: scale(1.2);
+    }
   }
 }
 

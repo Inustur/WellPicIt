@@ -66,9 +66,20 @@ body {
   font-weight: 600;
   border: none;
   transition: all 1s ease-out;
+  overflow: hidden;
 }
-.loading-guide #close-btn:hover {
-  transform: translateY(2.5px);
+.loading-guide #close-btn::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease;
+}
+.loading-guide #close-btn:hover::after {
+  width: 100%;
 }
 .loading-guide #gofullpage {
   background-color: transparent;
@@ -142,6 +153,10 @@ body {
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
+  transition: all 1s ease-out;
+}
+.bottom-bar .word-container div:hover {
+  transform: scale(1.2);
 }
 
 .image-container {
@@ -152,6 +167,10 @@ body {
 .image-container img {
   max-width: 8vw;
   height: auto;
+  transition: all 1s ease-out;
+}
+.image-container img:hover {
+  transform: scale(1.2);
 }
 
 @media (max-width: 768px) {
