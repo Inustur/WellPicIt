@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const allWords = [
     'cry', 'weird', 'nincompoop', 'laugh', 'a duck', 'yell', 'chill',
     'dizzy', 'sing', 'slip', 'giggle', 'bubble', 'quack', 'splash', 'relax',
-    'soapy', 'fuzzy', 'rubber duck', 'steam', 'towel', 'refresh', 'snicker',
+    'soapy', 'fuzzy', 'pick', 'steam', 'towel', 'refresh', 'snicker',
     'serenade', 'plop', 'doodle', 'meditate', 'squirt', 'loofah', 'detox',
     'pamper', 'squeaky', 'clean', 'hum', 'whistle', 'murmur', 'breathe', 'well',
     'good', 'bad', 'worse', 'better', 'potato', 'tomato', 'monster', 'toothbrush',

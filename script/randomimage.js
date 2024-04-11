@@ -10,6 +10,11 @@ document.addEventListener('DOMContentLoaded', function () {
     '../img/toilet.png',
     '../img/towel.png',
     '../img/toothbrush.png',
+    '../img/sparkle1.png',
+    '../img/sparkle2.png',
+    '../img/squares.png',
+    '../img/leaf1.png',
+    '../img/leaf2.png',
   ];
 
   function getRandomImages(imgArray, num) {
