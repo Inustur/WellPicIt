@@ -10,14 +10,14 @@ document.addEventListener('DOMContentLoaded', function() {
     'pamper', 'squeaky', 'clean', 'hum', 'whistle', 'murmur', 'breathe', 'well',
     'good', 'bad', 'worse', 'better', 'potato', 'tomato', 'monster', 'toothbrush',
     'plunger', 'toilet bowl', 'stinky', 'smelly', 'thick', 'thin', 'razor', 'socks',
-    'pikachu', 'clothes', 'cloths', 'toilet paper', 'wipe'
+    'pikachu', 'clothes', 'cloths', 'toilet paper', 'wipe', 'sponge'
   ];
 
   // Shuffle the array of words
   shuffle(allWords);
 
   // Select the first 6 words from the shuffled array
-  const selectedWords = allWords.slice(0, 16);
+  const selectedWords = allWords.slice(0, 20);
 
   // Create draggable elements for each selected word
   selectedWords.forEach(word => {
