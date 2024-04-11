@@ -102,11 +102,43 @@ body {
 
 .section-container {
   width: 97.4vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 .section-container .paragraph {
-  margin-left: 50px;
-  margin-bottom: 10vw;
+  margin: 3vw 1vw;
+  max-width: 30vw;
+  box-sizing: border-box;
 }
 .section-container .paragraph h1 {
-  font-size: 2.5em;
+  font-size: 1em;
+}
+
+.bottom-bar {
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+  background-color: #EFEBEB;
+  color: #000;
+}
+.bottom-bar h1 {
+  margin-left: 2vw;
+  font-size: 1.5em;
+}
+.bottom-bar .word-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2.5px solid #000;
+}
+.bottom-bar .word-container div {
+  background-color: transparent;
+  font-size: 1em;
+  font-weight: 700;
+  padding: 10px;
+  cursor: move;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }/*# sourceMappingURL=style.css.map */

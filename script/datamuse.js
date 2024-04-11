@@ -3,15 +3,21 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // List of all words
   const allWords = [
-    'cry', 'weird', 'nincompoop', 'laugh', 'a duck', 'pineapple', 'grape',
-    'carrot', 'broccoli', 'cucumber', 'tomato', 'potato', 'spinach', 'lettuce'
+    'cry', 'weird', 'nincompoop', 'laugh', 'a duck', 'yell', 'chill',
+    'dizzy', 'sing', 'slip', 'giggle', 'bubble', 'quack', 'splash', 'relax',
+    'soapy', 'fuzzy', 'rubber duck', 'steam', 'towel', 'refresh', 'snicker',
+    'serenade', 'plop', 'doodle', 'meditate', 'squirt', 'loofah', 'detox',
+    'pamper', 'squeaky', 'clean', 'hum', 'whistle', 'murmur', 'breathe', 'well',
+    'good', 'bad', 'worse', 'better', 'potato', 'tomato', 'monster', 'toothbrush',
+    'plunger', 'toilet bowl', 'stinky', 'smelly', 'thick', 'thin', 'razor', 'socks',
+    'pikachu', 'clothes', 'cloths', 'toilet paper', 'wipe'
   ];
 
   // Shuffle the array of words
   shuffle(allWords);
 
   // Select the first 6 words from the shuffled array
-  const selectedWords = allWords.slice(0, 6);
+  const selectedWords = allWords.slice(0, 16);
 
   // Create draggable elements for each selected word
   selectedWords.forEach(word => {
@@ -23,7 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
     Draggable.create(wordElement, {
       type: 'x,y',
       edgeResistance: 0.65,
-      bounds: 'body', // Set bounds to the entire body
     });
   });
 });
