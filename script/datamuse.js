@@ -1,16 +1,20 @@
-//Datamuse API for random word-generation
-document.addEventListener('DOMContentLoaded', async function() {
+document.addEventListener('DOMContentLoaded', function() {
   const bottomBar = document.querySelector('.bottom-bar .word-container');
 
-  // Fetch random words from the Datamuse API
-  const response = await fetch('https://api.datamuse.com/words?random=true&max=6');
-  const words = await response.json();
+  // List of all words
+  const allWords = [
+    'cry', 'weird', 'nincompoop', 'laugh', 'a duck', 'pineapple', 'grape',
+    'carrot', 'broccoli', 'cucumber', 'tomato', 'potato', 'spinach', 'lettuce'
+  ];
 
-  // Extract words from the API response
-  const wordList = words.map(word => word.word);
+  // Shuffle the array of words
+  shuffle(allWords);
 
-  // Create draggable elements for each word
-  wordList.forEach(word => {
+  // Select the first 6 words from the shuffled array
+  const selectedWords = allWords.slice(0, 6);
+
+  // Create draggable elements for each selected word
+  selectedWords.forEach(word => {
     const wordElement = document.createElement('div');
     wordElement.textContent = word;
     bottomBar.appendChild(wordElement);
@@ -19,7 +23,15 @@ document.addEventListener('DOMContentLoaded', async function() {
     Draggable.create(wordElement, {
       type: 'x,y',
       edgeResistance: 0.65,
-      bounds: '.bottom-bar',
+      bounds: 'body', // Set bounds to the entire body
     });
   });
 });
+
+// Function to shuffle an array (Fisher-Yates algorithm)
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+}
